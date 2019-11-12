@@ -33,6 +33,8 @@ github.com/walkert/go-evp v0.0.0-20170514035756-ffd5184bbd4e h1:EPYRkeFGIets0cI3
 github.com/walkert/go-evp v0.0.0-20170514035756-ffd5184bbd4e/go.mod h1:vqUHreXQjP6nu/ZToPGh9IIYU31BU53CPEGyNMq+UwE=
 github.com/walkert/op v0.0.1 h1:ue7quzSArLT2syWHm63qX6rVnsS9JDonGFhefUuy2Cs=
 github.com/walkert/op v0.0.1/go.mod h1:TJzV8pVRgBqOFIJe6MQqzitMSPg+IT65pw3uv2gKtJM=
+github.com/walkert/op v0.0.2 h1:0ZUkjZjpHdjoanZrCng6xJwDehtIiLxv3Kh5BZUbpIE=
+github.com/walkert/op v0.0.2/go.mod h1:TJzV8pVRgBqOFIJe6MQqzitMSPg+IT65pw3uv2gKtJM=
 github.com/walkert/stash v0.0.2 h1:Zpgon4h0009Ef4NYEjObh+HE6/uWyKfgD4TcfCS47v4=
 github.com/walkert/stash v0.0.2/go.mod h1:r4rWATrIKG7vlK0BRGCOCLq41HPgGZUL/JgUvttqJMY=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2 h1:VklqNMn3ovrHsnt90PveolxSbWFaJdECFbxSq0Mqo2M=
