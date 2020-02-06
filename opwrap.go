@@ -57,16 +57,16 @@ func getStashClient(envData stashMap) (*client.Client, error) {
 }
 
 // GetOP returns a pointer to an op.Op object configured with a password (if possible)
-func GetOP() (*op.Op, error) {
+func GetOP(opts ...op.Opt) (*op.Op, error) {
 	// Check to see if the caller has cert/conf/port set in their environment.
 	// If any are not set, just return a standard Op object.
 	envData, ok := getStashEnv()
 	if !ok {
-		return op.New()
+		return op.New(opts...)
 	}
 	c, err := getStashClient(envData)
 	if err != nil {
-		return op.New()
+		return op.New(opts...)
 	}
 	// Attempt to read the vault password from the configured stash server and
 	// include logic for entering the password if it isn't set or has expired.
@@ -78,11 +78,12 @@ func GetOP() (*op.Op, error) {
 			c.SetPassword()
 			pass, err = c.GetPassword()
 			if err != nil {
-				return op.New()
+				return op.New(opts...)
 			}
 		} else {
-			return op.New()
+			return op.New(opts...)
 		}
 	}
-	return op.New(op.WithPassword(string(pass)))
+	opts = append(opts, op.WithPassword(string(pass)))
+	return op.New(opts...)
 }
